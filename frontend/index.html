@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AndyAxcel - Plataforma de videos y comunidad">
+    <meta name="theme-color" content="#FF4444">
+    <title>AndyAxcel - Inicio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Estilos adicionales inline para la página principal */
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+        }
+        .hero-section h1 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease;
+        }
+        .hero-section p {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.9);
+            max-width: 600px;
+            margin: 0 auto 30px;
+            animation: fadeInUp 1s ease;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1.2s ease;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .stats-section {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: #FF4444;
+        }
+        .stat-item p {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">🎬 AndyAxcel</a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Inicio</a>
+                <a href="#">Explorar</a>
+                <a href="#">Tendencias</a>
+            </div>
+            <div class="nav-actions" id="navActions">
+                <div id="authButtons">
+                    <a href="login.html" class="btn btn-outline">Iniciar Sesión</a>
+                    <a href="registro.html" class="btn btn-primary">Registrarse</a>
+                </div>
+                <div id="userMenu" style="display:none;">
+                    <span id="userNameDisplay" style="margin-right:10px;font-weight:600;"></span>
+                    <a href="perfil.html" class="btn btn-outline">Mi Perfil</a>
+                    <button onclick="logout()" class="btn btn-danger">Salir</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-section">
+        <h1>Bienvenido a AndyAxcel</h1>
+        <p>Tu plataforma de videos favorita. Descubre, comparte y disfruta del mejor contenido creado por nuestra comunidad.</p>
+        <div class="hero-buttons">
+            <a href="registro.html" class="btn btn-primary btn-large">🚀 Comenzar Ahora</a>
+            <a href="#features" class="btn btn-outline btn-large" style="border-color:white;color:white;">🔍 Explorar</a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎬</div>
+                <h3>Contenido Exclusivo</h3>
+                <p>Accede a videos de alta calidad creados por creadores talentosos de todo el mundo.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💬</div>
+                <h3>Comunidad Activa</h3>
+                <p>Comenta, comparte y conecta con otros usuarios que comparten tus intereses.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Seguridad Total</h3>
+                <p>Tus datos están protegidos con encriptación de grado militar y autenticación segura.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>10K+</h3>
+                <p>Usuarios Registrados</p>
+            </div>
+            <div class="stat-item">
+                <h3>50K+</h3>
+                <p>Videos Publicados</p>
+            </div>
+            <div class="stat-item">
+                <h3>1M+</h3>
+                <p>Comentarios</p>
+            </div>
+            <div class="stat-item">
+                <h3>24/7</h3>
+                <p>Soporte Disponible</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 AndyAxcel. Todos los derechos reservados.</p>
+        <p style="margin-top:10px;">
+            <a href="#" style="color:#999;">Términos de Servicio</a> | 
+            <a href="#" style="color:#999;">Política de Privacidad</a> | 
+            <a href="#" style="color:#999;">Contacto</a>
+        </p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Verificar sesión al cargar
+        document.addEventListener('DOMContentLoaded', () => {
+            const token = CookieManager.get('token');
+            if (token) {
+                document.getElementById('authButtons').style.display = 'none';
+                document.getElementById('userMenu').style.display = 'flex';
+                
+                fetch('/api/users/profile', {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        document.getElementById('userNameDisplay').textContent = 
+                            '👋 ' + data.data.nombre;
+                        if (data.data.rol === 'ADMIN') {
+                            const adminLink = document.createElement('a');
+                            adminLink.href = 'admin.html';
+                            adminLink.className = 'btn btn-outline';
+                            adminLink.textContent = '⚙️ Admin';
+                            document.getElementById('userMenu').insertBefore(
+                                adminLink, 
+                                document.getElementById('userMenu').lastElementChild
+                            );
+                        }
+                    }
+                })
+                .catch(() => {
+                    document.getElementById('authButtons').style.display = 'flex';
+                    document.getElementById('userMenu').style.display = 'none';
+                });
+            }
+        });
+
+        function logout() {
+            fetch('/api/auth/logout', { method: 'POST' })
+                .finally(() => window.location.reload());
+        }
+    </script>
+</body>
+</html>
