@@ -1,0 +1,30 @@
+[data-theme="dark"] {
+    --primary: #FF6B6B;
+    --bg: #0F0F0F;
+    --bg-secondary: #1A1A1A;
+    --text: #FFFFFF;
+    --text-secondary: #B3B3B3;
+    --border: #333333;
+}
+[data-theme="dark"] body {
+    background-color: var(--bg);
+    color: var(--text);
+}
+[data-theme="dark"] .navbar,
+[data-theme="dark"] .auth-card,
+[data-theme="dark"] .card {
+    background-color: var(--bg-secondary);
+    border-color: var(--border);
+}
+[data-theme="dark"] .form-group input {
+    background-color: #242424;
+    color: white;
+    border-color: var(--border);
+}
+[data-theme="dark"] .btn-google {
+    background-color: #242424;
+    color: white;
+}
+[data-theme="dark"] footer {
+    background-color: #000;
+}
